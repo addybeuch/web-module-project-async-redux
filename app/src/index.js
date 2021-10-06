@@ -7,8 +7,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import logger from 'redux-logger';
 
-import thunk from 'react-redux';
+import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux'
+import { reducer } from './reducers'
 
 import { Provider } from 'react-redux';
 
@@ -16,11 +17,13 @@ import { Provider } from 'react-redux';
 const store = createStore(reducer, applyMiddleware(logger, thunk));
 
 ReactDOM.render(
-  <Provider store={store}>
+
     <React.StrictMode>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>,
     </React.StrictMode>,
-  </Provider>,
+
   document.getElementById('root')
 );
 

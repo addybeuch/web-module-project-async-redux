@@ -9,11 +9,11 @@ const Joke = (props) => {
     const { joke, isFetching, error, getJoke, fetchFail} = props;
 
     useEffect(() => {
-        props.getJoke();
+        getJoke();
     }, []);
 
     if (error) {
-        return <h2>Joke unable to load due to: {error}</h2>
+        return <h2>Joke unable to load due to: {error.err}</h2>
     }
 
     if (isFetching) {
@@ -21,14 +21,16 @@ const Joke = (props) => {
     }
 
     const handleClick = ()=> {
-        props.getJoke();
+        getJoke();
     };
 
+    const jokeSet = joke.setup || joke.joke;
+console.log(joke, 'Joke')
     return (
         <>
             <div>
-                <h2> Here is your joke: {joke.setup} </h2>
-                <h3> {joke.delivery} </h3>
+                <h2> Here is your joke: {jokeSet} </h2>
+                <h3> {joke?.delivery} </h3>
             </div>
             <button onClick={handleClick}>Want another Joke?</button>
         </>

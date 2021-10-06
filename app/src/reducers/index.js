@@ -1,10 +1,7 @@
 import { FETCH_START, FETCH_SUCCESS, FETCH_FAIL } from '../actions';
 
 const initialState = {
-    joke: {
-        setup: 'How will Christmas dinner be different after Brexit?',
-        delivery: 'No Brussels'
-    },
+    joke: {},
     isFetching: false,
     error: ''
 };
@@ -28,7 +25,7 @@ export const reducer = (state = initialState, action) => {
         case FETCH_FAIL:
             return {
                 ...state,
-                person: {},
+                joke: {},
                 isFetching: false,
                 error: action.payload
             }

@@ -9,7 +9,7 @@ export const getJoke = () => dispatch => {
 
     axios.get('https://v2.jokeapi.dev/joke/Any')
         .then(resp=> {
-            dispatch(fetchSuccess(resp.data.results[0]));
+            dispatch(fetchSuccess(resp.data));
         })
         .catch(err => {
             dispatch(fetchFail(err));
@@ -21,9 +21,9 @@ export const fetchStart = ()=> {
 }
 
 export const fetchSuccess = (joke)=> {
-    return ({type:FETCH_START, payload:joke});
+    return ({type:FETCH_SUCCESS, payload:joke});
 }
 
-export const fetchStart = (error)=> {
+export const fetchFail = (error)=> {
     return ({type:FETCH_FAIL, payload:error});
 }

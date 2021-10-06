@@ -5,7 +5,7 @@ import Joke from './components/Joke';
 function App() {
   return (
     <div>
-      <h1>Porn API</h1>
+      <h1>Fortnite Funnies!!!</h1>
       <Joke />
     </div>
   );
