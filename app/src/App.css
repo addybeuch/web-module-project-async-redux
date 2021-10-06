@@ -1,38 +1,35 @@
-.App {
+body {
   text-align: center;
+  background-color: #0956a8;
+  font-family: "Luckiest Guy";
+  color: white;
+  letter-spacing: 1.5px;
+}
+.fortnite {
+  width: 80%;
+  align-content: center;
+  border-radius: 25px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button {
+  font-family: "Luckiest Guy";
+  margin: 10px auto;
+  letter-spacing: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buttonInner {
+  background: linear-gradient(#ede801, #fefb72);
+  height: 45px;
+  width: 175px;
+  transform: skew(-5deg);
+  color: #343f65;
+  padding: 5px 3px 3px 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

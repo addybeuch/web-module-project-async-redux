@@ -28,11 +28,12 @@ const Joke = (props) => {
 console.log(joke, 'Joke')
     return (
         <>
-            <div>
-                <h2> Here is your joke: {jokeSet} </h2>
-                <h3> {joke?.delivery} </h3>
+            <div className='app'>
+                <h2 className='setup'> Here is your joke: {jokeSet} </h2>
+                <h3 className='delivery'> {joke?.delivery} </h3>
+            <div  className='button' onClick={handleClick}><span className='buttonInner'>Want another Joke?</span></div>
             </div>
-            <button onClick={handleClick}>Want another Joke?</button>
+            <img className='fortnite' src='https://cdn2.unrealengine.com/14br-consoles-1920x1080-wlogo-1920x1080-432974386.jpg' />
         </>
     );
 };
