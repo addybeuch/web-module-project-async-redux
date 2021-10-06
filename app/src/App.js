@@ -1,9 +1,13 @@
-
 import './App.css';
+
+import Joke from './components/Joke';
 
 function App() {
   return (
-    <h1>Porn API</h1>
+    <div>
+      <h1>Porn API</h1>
+      <Joke />
+    </div>
   );
 }
 
